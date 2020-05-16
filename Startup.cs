@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Roll4.Data;
 using Microsoft.Extensions.Configuration;
@@ -42,10 +36,7 @@ namespace Roll4
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequiredUniqueChars = 2;
 
-                options.User.RequireUniqueEmail = true;
                 options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-";
-
-                options.SignIn.RequireConfirmedEmail = true;
 
             });
         }
